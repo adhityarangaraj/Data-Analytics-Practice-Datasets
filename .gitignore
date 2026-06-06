@@ -1,0 +1,22 @@
+# Archives
+*.zip
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Code Runner temporary files
+tempCodeRunnerFile.py
+tempCodeRunnerFile.*
+
+# OS junk
+.DS_Store
+Thumbs.db

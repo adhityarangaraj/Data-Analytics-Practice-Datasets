@@ -1,0 +1,21 @@
+import pandas as pd
+df=pd.read_csv('people-on-banknotes.csv')
+print(df.head())
+print(df.shape)
+print(df.columns)
+print(df['gender'].value_counts().idxmax())
+print("The percentage of males is more and is of",((df['gender'].value_counts().max())/279)*100)
+temp=df['occupation'].value_counts()
+print(temp)
+print("The occupation more popular bw them is:",temp[['Writer','Politician']].idxmax())
+print("The percent of musicians is:",(temp[['Musician']]/279)*100)
+print(df.query('first_death_diff<0 or first_death_diff== "NaN"'))
+
+ind=df['death'].idxmin()
+print("The oldest historical figure is:",df.iloc[ind,2])
+temp=df.query('first_death_diff>100')
+print(type(temp))
+print((len(temp)/279)*100)
+print(df['death'].dtype)
+print(df['death'].unique())
+#Data Cleaning needs to be done will do that later 
